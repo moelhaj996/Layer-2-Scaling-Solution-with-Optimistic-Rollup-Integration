@@ -1,0 +1,28 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "deploy:l1": "hardhat run scripts/deploy-l1.js --network sepolia",
+    "deploy:l2": "hardhat run scripts/deploy-l2.js --network optimismSepolia",
+    "verify:l1": "hardhat verify --network sepolia",
+    "verify:l2": "hardhat verify --network optimismSepolia",
+    "clean": "hardhat clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "engines": {
+    "node": ">=18.0.0 <=22.x"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "hardhat": "^2.22.0"
+  }
+}

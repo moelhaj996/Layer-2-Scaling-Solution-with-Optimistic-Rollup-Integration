@@ -1,0 +1,190 @@
+# ============================================================================
+# L2 Scaling Solution - Git Ignore File
+# ============================================================================
+
+# ==============================================================================
+# CRITICAL: Environment and Secrets
+# ==============================================================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.jks
+privatekey.txt
+mnemonic.txt
+
+# ==============================================================================
+# Node.js / JavaScript / TypeScript
+# ==============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+.DS_Store
+*.log
+*.swp
+*.swo
+*~
+
+# ==============================================================================
+# Hardhat / Solidity
+# ==============================================================================
+artifacts/
+cache/
+typechain-types/
+coverage/
+coverage.json
+*.tsbuildinfo
+
+# Hardhat files
+hardhat.config.ts.backup
+deployments/
+.openzeppelin/
+
+# Gas reports
+gas-report.txt
+
+# ==============================================================================
+# Java / Maven / Spring Boot
+# ==============================================================================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# ==============================================================================
+# Database
+# ==============================================================================
+*.db
+*.sqlite
+*.sqlite3
+postgres-data/
+
+# ==============================================================================
+# Docker
+# ==============================================================================
+docker-compose.override.yml
+
+# ==============================================================================
+# Logs
+# ==============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==============================================================================
+# Operating System
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ==============================================================================
+# Kubernetes Secrets (if using K8s)
+# ==============================================================================
+k8s/secrets/
+*.secret.yaml
+
+# ==============================================================================
+# Temporary Files
+# ==============================================================================
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+*.cache
+
+# ==============================================================================
+# Build Artifacts
+# ==============================================================================
+*.jar
+*.war
+*.ear
+*.class
+
+# Keep wrapper jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# ==============================================================================
+# Frontend Specific
+# ==============================================================================
+# Vercel
+.vercel
+
+# Turbo
+.turbo
+
+# ==============================================================================
+# Test Coverage
+# ==============================================================================
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# ==============================================================================
+# Documentation
+# ==============================================================================
+# Keep README, but ignore generated docs
+# docs/_build/

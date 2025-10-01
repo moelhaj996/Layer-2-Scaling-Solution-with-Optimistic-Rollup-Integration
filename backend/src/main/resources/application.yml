@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: l2-scaling-monitor
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/l2scaling}
+    username: ${DATABASE_USER:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
+
+ethereum:
+  l1:
+    rpc-url: ${L1_RPC_URL:https://sepolia.infura.io/v3/YOUR_KEY}
+    chain-id: 11155111
+  l2:
+    rpc-url: ${L2_RPC_URL:https://sepolia.optimism.io}
+    chain-id: 11155420
+
+contracts:
+  l1-bridge-address: ${L1_BRIDGE_ADDRESS:}
+  l2-bridge-address: ${L2_BRIDGE_ADDRESS:}
+  l1-token-address: ${L1_TOKEN_ADDRESS:}
+  l2-token-address: ${L2_TOKEN_ADDRESS:}
+
+relayer:
+  private-key: ${PRIVATE_KEY:}
+  enabled: ${RELAYER_ENABLED:false}
+
+logging:
+  level:
+    com.l2scaling: INFO
+    org.web3j: WARN
+    org.springframework: INFO
